@@ -868,6 +868,7 @@ const ReleaseParser = /** @lends module:ReleaseParser */ ( releaseName, section 
 		}
 		// Music related sources
 		else if (
+			!hasAttribute( patterns.formatsVideo, 'format' ) &&
 			isType( 'music' ) ||
 			hasAttribute( patterns.sourcesMusic, 'source' ) ||
 			hasAttribute( patterns.flagsMusic, 'flags' )

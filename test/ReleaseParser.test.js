@@ -394,6 +394,14 @@ describe( 'ReleaseParser', function()
 			'Title: Friends / Group: RoToTo / Season: 5 / Episode: 5-8 / Flags: Subbed / Source: DVDRip / Format: DiVX / Type: TV'
 		)
 	})
+	
+	it( 'TV #17 - MusicVideo misscategorization', () =>
+	{
+		assert.equal(
+			ReleaseParser( '1000-lb.Sisters.S07E04.1080p.WEB.h264-FREQUENCY', 'PRE' ).toString(),
+			'Title: 1000-lb Sisters / Group: FREQUENCY / Season: 7 / Source: WEB / Format: h264 / Resolution: 1080p / Type: TV'
+		)
+	})
 
 	// TV SPorts
 	it( 'TV Sports #1', () =>
