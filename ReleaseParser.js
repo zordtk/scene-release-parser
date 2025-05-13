@@ -666,8 +666,7 @@ const ReleaseParser = /** @lends module:ReleaseParser */ ( releaseName, section 
 		)
 		{
 			let regexPattern = '/[._-]' + patterns.REGEX_EPISODE + '[._-]/i'
-			
-			if ( isType( 'ebook' ) || isType( 'abook' ) || isType( 'music' ) )
+			if ( isType( 'ebook' ) || isType( 'abook' ) || (isType( 'music' ) && !hasAttribute(patterns.formatsVideo, 'format')) )
 			{
 				regexPattern = '/[._-]' + patterns.REGEX_EPISODE_OTHER + '[._-]/i'
 			}
@@ -2368,12 +2367,12 @@ const ReleaseParser = /** @lends module:ReleaseParser */ ( releaseName, section 
 	parseOs()				// For Software/Game rls: Operating System
 	parseDevice()			// For Software/Game rls: Device (like console)
 	parseVersion()			// For Software/Game rls: Version
+	parseFormat()			// Rls format/encoding
+	parseSource()
 	parseEpisode()			// For TV/Audiobook/Ebook (issue) rls: Episode
 	parseSeason()			// For TV rls: Season
 	parseDate()
 	parseYear()
-	parseFormat()			// Rls format/encoding
-	parseSource()
 	parseResolution()		// For Video rls: Resolution (720, 1080p...)
 	parseAudio()			// For Video rls: Audio format
 	parseLanguage()			// Object with language code as key and name as value (in english)

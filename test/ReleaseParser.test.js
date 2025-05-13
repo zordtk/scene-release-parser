@@ -399,7 +399,7 @@ describe( 'ReleaseParser', function()
 	{
 		assert.equal(
 			ReleaseParser( '1000-lb.Sisters.S07E04.1080p.WEB.h264-FREQUENCY', 'PRE' ).toString(),
-			'Title: 1000-lb Sisters / Group: FREQUENCY / Season: 7 / Source: WEB / Format: h264 / Resolution: 1080p / Type: TV'
+			'Title: 1000-lb Sisters / Group: FREQUENCY / Season: 7 / Episode: 4 / Source: WEB / Format: h264 / Resolution: 1080p / Type: TV'
 		)
 	})
 
