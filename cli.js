@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import ReleaseParser from './ReleaseParser.js'
-import pckg from './package.json' assert { type: 'json' }
+import pckg from './package.json' with { type: 'json' }
 
 /**
  * CLI interface for ReleaseParser
